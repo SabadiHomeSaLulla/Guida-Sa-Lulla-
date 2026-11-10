@@ -3,31 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sabadi Home Sa Lulla | Welcome Guide</title>
+  <title>Sabadi Home Sa Lulla | Welcome Guide Castiadas</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Guida digitale ufficiale di Sabadi Home Sa Lulla a Castiadas. Scopri le spiagge di Costa Rei e Villasimius, ristoranti tipici, meteo e servizi utili.">
+  <meta name="keywords" content="Sa Lulla, Castiadas, Costa Rei, Villasimius, Sardegna, Welcome Guide, Spiagge Sardegna">
+  <link rel="canonical" href="https://salulla.it/">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://salulla.it/">
+  <meta property="og:title" content="Sabadi Home Sa Lulla | Welcome Guide">
+  <meta property="og:description" content="La tua guida digitale per vivere al meglio Castiadas, Costa Rei, Villasimius e la costa sud-orientale della Sardegna.">
+  <meta property="og:image" content="https://salulla.it/logo_sa_lulla.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sabadi Home Sa Lulla | Welcome Guide">
+  <meta name="twitter:description" content="La tua guida digitale per vivere al meglio Castiadas, Costa Rei, Villasimius e la Sardegna.">
+  <meta name="twitter:image" content="https://salulla.it/logo_sa_lulla.png">
+
+  <!-- Favicon & Icons -->
   <link rel="icon" type="image/png" sizes="96x96" href="/logo_sa_lulla.png">
-<link rel="apple-touch-icon" href="/logo_sa_lulla.png">
+  <link rel="apple-touch-icon" href="/logo_sa_lulla.png">
+
+  <!-- Dati Strutturati avanzati (Schema.org) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Sa Lulla Guide",
-  "url": "https://salulla.it/"
-}
-</script>
-  <!-- Google Fonts: Emilys Candy solo per il titolo dell'header e Montserrat per tutto il resto -->
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Sabadi Home Sa Lulla",
+    "image": "https://salulla.it/logo_sa_lulla.png",
+    "url": "https://salulla.it/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Castiadas",
+      "addressRegion": "SU",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.24,
+      "longitude": 9.57
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
   <style>
     :root {
-      --primary: #C68B59;       /* Sabbia dorata intensa */
-      --primary-dark: #8B5E34;  /* Terra calda per scritte ed elementi scuri */
-      --accent: #E8A87C;        /* Sabbia calda/pesca per dettagli */
-      --bg: #FDFBF7;            /* Sfondo color sabbia chiarissimo/avorio */
-      --card-bg: #FFFFFF;       /* Schede bianche pulite */
-      --card-border: #F0E5D8;   /* Bordo tenue toni sabbia */
-      --text: #3D312A;          /* Testo scuro caldo */
-      --text-muted: #7A6B61;    /* Testo secondario */
+      --primary: #C68B59;
+      --primary-dark: #8B5E34;
+      --accent: #E8A87C;
+      --bg: #FDFBF7;
+      --card-bg: #FFFFFF;
+      --card-border: #F0E5D8;
+      --text: #3D312A;
+      --text-muted: #7A6B61;
       --radius: 16px;
       --shadow: 0 8px 30px rgba(139, 94, 52, 0.08);
     }
@@ -45,13 +81,12 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      padding-bottom: 90px;
+      padding-bottom: 95px;
     }
 
-    /* Header & Logo */
     header {
       background: linear-gradient(135deg, #FAF3E0 0%, #F3E5AB 100%);
-      padding: 35px 20px 25px;
+      padding: 25px 20px 25px;
       text-align: center;
       border-bottom-left-radius: 28px;
       border-bottom-right-radius: 28px;
@@ -60,25 +95,29 @@
       position: relative;
     }
 
-    /* Selettore Lingua */
-    .lang-selector {
-      position: absolute;
+    /* Selettore Lingua Fisso / Sticky */
+    .lang-selector-sticky {
+      position: fixed;
       top: 15px;
       right: 15px;
+      z-index: 10000;
       display: flex;
       gap: 5px;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       padding: 4px;
       border-radius: 20px;
       border: 1px solid var(--card-border);
+      box-shadow: 0 4px 15px rgba(139, 94, 52, 0.15);
     }
 
     .lang-btn {
       background: none;
       border: none;
       font-size: 0.75rem;
-      font-weight: 600;
-      padding: 4px 8px;
+      font-weight: 700;
+      padding: 5px 10px;
       border-radius: 14px;
       cursor: pointer;
       color: var(--text-muted);
@@ -91,8 +130,8 @@
     }
 
     .logo-img {
-      width: 130px;
-      height: 130px;
+      width: 120px;
+      height: 120px;
       object-fit: contain;
       border-radius: 50%;
       box-shadow: 0 6px 18px rgba(139, 94, 52, 0.15);
@@ -100,10 +139,9 @@
       background: #000000;
     }
 
-    /* SOLO il Titolo principale usa Emilys Candy */
     header h1 {
       font-family: 'Emilys Candy', cursive !important;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 400;
       color: var(--primary-dark);
       margin-bottom: 4px;
@@ -116,7 +154,6 @@
       font-weight: 400;
     }
 
-    /* Navigation Bar Fissa in basso */
     nav {
       position: fixed;
       bottom: 0;
@@ -162,7 +199,6 @@
       stroke-width: 2.2;
     }
 
-    /* Main Container */
     main {
       max-width: 600px;
       margin: 0 auto;
@@ -193,7 +229,6 @@
       gap: 10px;
     }
 
-    /* Cards */
     .card {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -233,7 +268,6 @@
       border: 1px solid #EADBC8;
     }
 
-    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -272,7 +306,6 @@
       color: #FFFFFF;
     }
 
-    /* Card di benvenuto */
     .welcome-card {
       background: linear-gradient(135deg, #FAF3E0 0%, #F3E5AB 100%);
       border: 1px solid #EADBC8;
@@ -294,17 +327,181 @@
       font-size: 0.95rem;
       line-height: 1.6;
     }
+
+    /* Widget Meteo */
+    #meteo-sa-lulla {
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 18px;
+      background: #edf5f1;
+      color: #244b40;
+    }
+    #meteo-sa-lulla h3 { color: #244b40; }
+    #meteo-sa-lulla .meteo-sub { color: #60786e; margin-bottom: 16px; font-size: 0.9rem; }
+    #meteo-sa-lulla .meteo-current { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 16px; background: white; border-radius: 14px; }
+    #meteo-sa-lulla .meteo-icon { font-size: 3rem; }
+    #meteo-sa-lulla .meteo-temp { font-size: 2.5rem; font-weight: 700; line-height: 1.1; }
+    #meteo-sa-lulla .meteo-details { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    #meteo-sa-lulla .meteo-detail { flex: 1 1 120px; background: white; padding: 12px; border-radius: 12px; font-size: .85rem; }
+    #meteo-sa-lulla .meteo-detail strong { display: block; font-size: 1rem; margin-top: 4px; }
+    #meteo-sa-lulla .meteo-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; margin-top: 16px; }
+    #meteo-sa-lulla .meteo-day { text-align: center; background: white; padding: 10px 4px; border-radius: 10px; font-size: .75rem; }
+    #meteo-sa-lulla .meteo-day .day-icon { font-size: 1.3rem; margin: 6px 0; }
+    #meteo-sa-lulla .meteo-day strong { display: block; margin-top: 4px; }
+    #meteo-sa-lulla .meteo-footer { font-size: .75rem; color: #71857d; margin-top: 14px; text-align: center; }
+
+    @media(max-width: 600px) {
+      #meteo-sa-lulla .meteo-days { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    /* BANNER COOKIE & MODALE PREFERENZE */
+    .cookie-banner {
+      position: fixed;
+      bottom: 75px;
+      left: 15px;
+      right: 15px;
+      max-width: 570px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+      z-index: 10001;
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .cookie-banner.show { display: block; }
+
+    .cookie-banner h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .cookie-banner p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+
+    .cookie-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+      flex: 1 1 auto;
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .cookie-btn-accept { background: var(--primary-dark); color: #FFFFFF; }
+    .cookie-btn-reject { background: #EADBC8; color: var(--primary-dark); }
+    .cookie-btn-settings { background: transparent; color: var(--text-muted); border: 1px solid var(--card-border); }
+
+    /* Modal Gestione Cookie */
+    .cookie-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 10002;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .cookie-modal-overlay.show { display: flex; }
+
+    .cookie-modal {
+      background: #FFFFFF;
+      border-radius: 20px;
+      max-width: 500px;
+      width: 100%;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .cookie-modal h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .cookie-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .cookie-option-info h5 {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .cookie-option-info p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .cookie-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+
+    .cookie-switch input { opacity: 0; width: 0; height: 0; }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: .3s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px; width: 18px;
+      left: 3px; bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider { background-color: var(--primary-dark); }
+    input:checked + .slider:before { transform: translateX(20px); }
+    input:disabled + .slider { opacity: 0.6; cursor: not-allowed; }
   </style>
 </head>
 <body>
 
-  <header>
-    <!-- Selettore Lingua -->
-    <div class="lang-selector">
-      <button class="lang-btn active" onclick="setLanguage('it')">IT</button>
-      <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-    </div>
+  <!-- TASTO SCELTA LINGUA FISSO / STICKY -->
+  <div class="lang-selector-sticky">
+    <button class="lang-btn active" onclick="setLanguage('it')">IT</button>
+    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+  </div>
 
+  <header>
     <img src="logo_sa_lulla.png" alt="Sabadi Home Sa Lulla" class="logo-img" onerror="this.src='1000177127.png'">
     <h1>Sabadi Home Sa Lulla</h1>
     <p data-i18n="subtitle">Castiadas, Sardegna</p>
@@ -330,13 +527,52 @@
         <p data-i18n="web_desc">Per maggiori informazioni sulle nostre strutture, galleria fotografica e contatti diretti visitate il nostro sito web.</p>
         <a href="https://salulla.it" target="_blank" class="btn btn-web"><i data-lucide="external-link"></i> <span data-i18n="btn_visit">Visita Salulla.it</span></a>
       </div>
+
+      <!-- WIDGET METEO -->
+      <div id="meteo-sa-lulla">
+        <h3 data-i18n="weather_title">☀️ Meteo locale</h3>
+        <div class="meteo-sub" data-i18n="weather_sub">Castiadas, Sardegna</div>
+        
+        <div id="meteo-status" class="meteo-status" data-i18n="weather_loading">Caricamento previsioni...</div>
+        
+        <div id="meteo-content" hidden>
+          <div class="meteo-current">
+            <div class="meteo-icon" id="meteo-icon">☀️</div>
+            <div>
+              <div class="meteo-temp" id="meteo-temp">--°</div>
+              <div id="meteo-description">--</div>
+            </div>
+          </div>
+          <div class="meteo-details">
+            <div class="meteo-detail">
+              <span data-i18n="w_feels">🌡️ Percepita</span>
+              <strong id="meteo-feels">--°</strong>
+            </div>
+            <div class="meteo-detail">
+              <span data-i18n="w_wind">💨 Vento</span>
+              <strong id="meteo-wind">-- km/h</strong>
+            </div>
+            <div class="meteo-detail">
+              <span data-i18n="w_gusts">🌬️ Raffiche</span>
+              <strong id="meteo-gusts">-- km/h</strong>
+            </div>
+          </div>
+          <h3 style="margin-top:20px; font-size:1rem;" data-i18n="w_forecast_title">Previsioni 7 giorni</h3>
+          <div class="meteo-days" id="meteo-days"></div>
+        </div>
+        <div class="meteo-footer" data-i18n="weather_footer">Dati meteorologici: Open-Meteo · Previsioni indicative.</div>
+      </div>
+
+      <!-- Link Gestione Preferenze Cookie a piè di pagina -->
+      <div style="text-align: center; margin-top: 15px;">
+        <button onclick="openCookieModal()" style="background:none; border:none; color:var(--text-muted); font-size:0.75rem; text-decoration:underline; cursor:pointer;" data-i18n="cookie_manage">Gestisci preferenze cookie</button>
+      </div>
     </section>
 
     <!-- SEZIONE SPIAGGE -->
     <section id="spiagge" class="section">
       <h2 class="section-title"><i data-lucide="waves"></i> <span data-i18n="nav_beaches">Spiagge della Costa</span></h2>
 
-      <!-- 1. Murtas -->
       <div class="card">
         <h3>1. Spiaggia di Murtas</h3>
         <div class="tags"><span class="tag">Villaputzu</span><span class="tag" data-i18n="tag_wild">Selvaggia</span></div>
@@ -344,7 +580,6 @@
         <a href="https://maps.google.com/?q=Spiaggia+di+Murtas" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 2. Feraxi -->
       <div class="card">
         <h3>2. Spiaggia di Feraxi</h3>
         <div class="tags"><span class="tag">Muravera</span><span class="tag" data-i18n="tag_dunes">Dune Naturali</span></div>
@@ -352,7 +587,6 @@
         <a href="https://maps.google.com/?q=Spiaggia+di+Feraxi" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 3. Portu S'Ilixi -->
       <div class="card">
         <h3>3. Spiaggia di Portu S'Ilixi</h3>
         <div class="tags"><span class="tag">Capo Ferrato Nord</span><span class="tag" data-i18n="tag_bay">Baia Selvaggia</span></div>
@@ -360,7 +594,6 @@
         <a href="https://maps.google.com/?q=Spiaggia+di+Portu+S+Ilixi" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 4. Cala Sa Figu -->
       <div class="card">
         <h3>4. Cala Sa Figu</h3>
         <div class="tags"><span class="tag">Capo Ferrato</span><span class="tag" data-i18n="tag_private">Riservata</span></div>
@@ -368,7 +601,6 @@
         <a href="https://maps.google.com/?q=Cala+Sa+Figu+Castiadas" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 5. Capo Ferrato -->
       <div class="card">
         <h3>5. Capo Ferrato</h3>
         <div class="tags"><span class="tag" data-i18n="tag_promontory">Promontorio</span><span class="tag">Snorkeling</span></div>
@@ -376,7 +608,6 @@
         <a href="https://maps.google.com/?q=Capo+Ferrato" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 6. Ziu Franciscu -->
       <div class="card">
         <h3>6. Spiaggia di Ziu Franciscu</h3>
         <div class="tags"><span class="tag">Costa Rei Nord</span><span class="tag" data-i18n="tag_sand">Sabbia Fine</span></div>
@@ -384,7 +615,6 @@
         <a href="https://maps.google.com/?q=Spiaggia+di+Ziu+Franciscu" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 7. Piscina Rei -->
       <div class="card">
         <h3>7. Spiaggia di Piscina Rei</h3>
         <div class="tags"><span class="tag">Costa Rei Nord</span><span class="tag" data-i18n="tag_dunes">Dune</span></div>
@@ -392,7 +622,6 @@
         <a href="https://maps.google.com/?q=Spiaggia+di+Piscina+Rei" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 8. Costa Rei -->
       <div class="card">
         <h3>8. Spiaggia di Costa Rei</h3>
         <div class="tags"><span class="tag">Costa Rei Centro</span><span class="tag" data-i18n="tag_equipped">Attrezzata</span></div>
@@ -400,7 +629,6 @@
         <a href="https://maps.google.com/?q=Costa+Rei+Spiaggia" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 9. Scoglio di Peppino -->
       <div class="card">
         <h3>9. Scoglio di Peppino</h3>
         <div class="tags"><span class="tag" data-i18n="tag_iconic">Iconica</span><span class="tag" data-i18n="tag_pool">Piscina Naturale</span></div>
@@ -408,7 +636,6 @@
         <a href="https://maps.google.com/?q=Scoglio+di+Peppino" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 10. Sant'Elmo -->
       <div class="card">
         <h3>10. Spiaggia Sant'Elmo</h3>
         <div class="tags"><span class="tag">Castiadas</span><span class="tag" data-i18n="tag_sheltered">Riparata</span></div>
@@ -416,7 +643,6 @@
         <a href="https://maps.google.com/?q=Spiaggia+Sant+Elmo" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 11. Monte Turno -->
       <div class="card">
         <h3>11. Cala Monte Turno</h3>
         <div class="tags"><span class="tag">Castiadas</span><span class="tag" data-i18n="tag_kiosk">Chiosco Bar</span></div>
@@ -424,7 +650,6 @@
         <a href="https://maps.google.com/?q=Cala+Monte+Turno" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 12. San Pietro -->
       <div class="card">
         <h3>12. Spiaggia di San Pietro (Marina)</h3>
         <div class="tags"><span class="tag">Castiadas</span><span class="tag" data-i18n="tag_golden">Sabbia Dorata</span></div>
@@ -432,7 +657,6 @@
         <a href="https://maps.google.com/?q=Spiaggia+di+Marina+San+Pietro" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 13. Cala Sinzias -->
       <div class="card">
         <h3>13. Spiaggia di Cala Sinzias</h3>
         <div class="tags"><span class="tag">Castiadas Sud</span><span class="tag" data-i18n="tag_pine">Pineta</span></div>
@@ -440,7 +664,6 @@
         <a href="https://maps.google.com/?q=Cala+Sinzias" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 14. Cala Pira -->
       <div class="card">
         <h3>14. Cala Pira</h3>
         <div class="tags"><span class="tag">Castiadas Sud</span><span class="tag" data-i18n="tag_tower">Torre Aragonese</span></div>
@@ -448,7 +671,6 @@
         <a href="https://maps.google.com/?q=Cala+Pira" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 15. Porceddus -->
       <div class="card">
         <h3>15. Spiaggia di Porceddus</h3>
         <div class="tags"><span class="tag">Castiadas</span><span class="tag" data-i18n="tag_quiet">Tranquilla</span></div>
@@ -456,7 +678,6 @@
         <a href="https://maps.google.com/?q=Spiaggia+di+Porceddus" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 16. Punta Molentis -->
       <div class="card">
         <h3>16. Spiaggia di Punta Molentis</h3>
         <div class="tags"><span class="tag">Villasimius</span><span class="tag" data-i18n="tag_reservation">Numero Chiuso</span></div>
@@ -464,7 +685,6 @@
         <a href="https://maps.google.com/?q=Punta+Molentis" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 17. Porto Giunco -->
       <div class="card">
         <h3>17. Spiaggia di Porto Giunco</h3>
         <div class="tags"><span class="tag">Villasimius</span><span class="tag" data-i18n="tag_flamingos">Fenicotteri Rosa</span></div>
@@ -472,7 +692,6 @@
         <a href="https://maps.google.com/?q=Porto+Giunco" target="_blank" class="btn"><i data-lucide="map-pin"></i> <span data-i18n="btn_maps">Naviga su Maps</span></a>
       </div>
 
-      <!-- 18. Campu Longu -->
       <div class="card">
         <h3>18. Spiaggia di Campu Longu</h3>
         <div class="tags"><span class="tag">Villasimius</span><span class="tag" data-i18n="tag_soft">Sabbia Soffice</span></div>
@@ -623,7 +842,7 @@
 
       <div class="card">
         <h3 data-i18n="s6_title">Farmacia Olia Speciosa</h3>
-        <p>Piazza Municipio, Olia Speciosa (Castiadas).</p>
+        <p data-i18n="s6_desc">Piazza Municipio, Olia Speciosa (Castiadas).</p>
         <a href="https://maps.google.com/?q=Farmacia+Olia+Speciosa" target="_blank" class="btn btn-secondary"><i data-lucide="map-pin"></i> <span data-i18n="btn_map_pharmacy">Mappa Farmacia</span></a>
       </div>
     </section>
@@ -653,10 +872,56 @@
     </button>
   </nav>
 
+  <!-- BANNER COOKIES STYLE SALULLA.IT -->
+  <div id="cookieBanner" class="cookie-banner">
+    <h4 data-i18n="cookie_title">Informativa sui Cookie</h4>
+    <p data-i18n="cookie_desc">Utilizziamo i cookie per migliorare la tua esperienza di navigazione su Salulla.it. I cookie tecnici sono necessari per il funzionamento del sito.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-accept" onclick="acceptAllCookies()" data-i18n="cookie_accept">Accetta tutti</button>
+      <button class="cookie-btn cookie-btn-reject" onclick="rejectOptionalCookies()" data-i18n="cookie_reject">Solo necessari</button>
+      <button class="cookie-btn cookie-btn-settings" onclick="openCookieModal()" data-i18n="cookie_settings">Preferenze</button>
+    </div>
+  </div>
+
+  <!-- MODALE GESTIONE PREFERENZE COOKIES -->
+  <div id="cookieModal" class="cookie-modal-overlay">
+    <div class="cookie-modal">
+      <h3 data-i18n="cookie_modal_title">Preferenze Cookie</h3>
+      
+      <div class="cookie-option">
+        <div class="cookie-option-info">
+          <h5 data-i18n="cookie_nec_title">Cookie Tecnici (Necessari)</h5>
+          <p data-i18n="cookie_nec_desc">Essenziali per la funzionalità di base del sito e del widget meteo.</p>
+        </div>
+        <label class="cookie-switch">
+          <input type="checkbox" checked disabled>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="cookie-option">
+        <div class="cookie-option-info">
+          <h5 data-i18n="cookie_ana_title">Cookie Analitici & Statistiche</h5>
+          <p data-i18n="cookie_ana_desc">Ci aiutano a capire come i visitatori interagiscono col sito web.</p>
+        </div>
+        <label class="cookie-switch">
+          <input type="checkbox" id="analyticsConsent">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div style="margin-top: 18px; display: flex; gap: 10px;">
+        <button class="btn btn-web" onclick="saveCookiePreferences()" data-i18n="cookie_save">Salva preferenze</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     lucide.createIcons();
 
-    // Dizionario delle traduzioni
+    let currentLang = 'it';
+
+    // Dizionario delle traduzioni completo IT / EN
     const translations = {
       it: {
         subtitle: "Castiadas, Sardegna",
@@ -676,56 +941,35 @@
         btn_call: "Chiama",
         btn_map: "Mappa",
         btn_map_info: "Mappa & Info",
-        tag_wild: "Selvaggia",
-        tag_dunes: "Dune Naturali",
-        tag_bay: "Baia Selvaggia",
-        tag_private: "Riservata",
-        tag_promontory: "Promontorio",
-        tag_sand: "Sabbia Fine",
-        tag_equipped: "Attrezzata",
-        tag_iconic: "Iconica",
-        tag_pool: "Piscina Naturale",
-        tag_sheltered: "Riparata",
-        tag_kiosk: "Chiosco Bar",
-        tag_golden: "Sabbia Dorata",
-        tag_pine: "Pineta",
-        tag_tower: "Torre Aragonese",
-        tag_quiet: "Tranquilla",
-        tag_reservation: "Numero Chiuso",
-        tag_flamingos: "Fenicotteri Rosa",
-        tag_soft: "Sabbia Soffice",
-        tag_rental: "Noleggio & Tour",
-        tag_dinghy: "Gommone & Tour",
-        tag_sailing: "Gommone & Vela",
-        tag_sailboat: "Barca a Vela",
-        tag_mpa: "Area Marina Protetta",
-        tag_yacht: "Mini Yacht & Gommoni",
-        tag_traditional: "Cucina Tipica",
-        tag_local: "Prodotti Locali",
-        tag_fixed: "Menù Fisso Tipico",
-        tag_meat: "Carne Locale",
-        tag_family: "Conduzione Familiare",
-        tag_medical: "Emergenza Sanitaria",
-        tag_police: "Forze dell'Ordine",
-        tag_emerg: "Emergenze",
-        tag_bank: "Banca & Bancomat",
-        tag_church: "Chiesa",
-        tag_closest: "Più Vicino",
-        btn_call_med: "Chiama Guardia Medica",
-        btn_call_carab: "Chiama Carabinieri",
-        btn_call_bank: "Chiama Banca",
-        btn_map_church: "Mappa Chiesa",
-        btn_nav_super: "Naviga al Supermercato",
-        btn_map_pharmacy: "Mappa Farmacia",
-        s1_title: "Guardia Medica (Olia Speciosa)",
-        s1_desc: "Servizio di guardia medica turistica / assistenziale a Olia Speciosa.",
-        s2_title: "Carabinieri (Castiadas Centro)",
-        s2_desc: "Comando Stazione Carabinieri di Castiadas sulla SP20.",
+        weather_title: "☀️ Meteo locale",
+        weather_sub: "Castiadas, Sardegna · Sardinia",
+        weather_loading: "Caricamento previsioni...",
+        weather_footer: "Dati meteorologici: Open-Meteo · Previsioni indicative.",
+        w_feels: "🌡️ Percepita",
+        w_wind: "💨 Vento",
+        w_gusts: "🌬️ Raffiche",
+        w_forecast_title: "Previsioni 7 giorni",
+        weather_error: "Meteo momentaneamente non disponibile.",
+        cookie_title: "Informativa sui Cookie",
+        cookie_desc: "Utilizziamo i cookie per migliorare la tua esperienza di navigazione. I cookie tecnici sono necessari al funzionamento del sito.",
+        cookie_accept: "Accetta tutti",
+        cookie_reject: "Solo necessari",
+        cookie_settings: "Preferenze",
+        cookie_manage: "Gestisci preferenze cookie",
+        cookie_modal_title: "Preferenze Cookie",
+        cookie_nec_title: "Cookie Tecnici (Necessari)",
+        cookie_nec_desc: "Essenziali per il funzionamento della guida e del meteo.",
+        cookie_ana_title: "Cookie Analitici",
+        cookie_ana_desc: "Ci aiutano a migliorare i servizi analizzando l'uso del sito.",
+        cookie_save: "Salva preferenze",
+        tag_wild: "Selvaggia", tag_dunes: "Dune Naturali", tag_bay: "Baia Selvaggia", tag_private: "Riservata", tag_promontory: "Promontorio", tag_sand: "Sabbia Fine", tag_equipped: "Attrezzata", tag_iconic: "Iconica", tag_pool: "Piscina Naturale", tag_sheltered: "Riparata", tag_kiosk: "Chiosco Bar", tag_golden: "Sabbia Dorata", tag_pine: "Pineta", tag_tower: "Torre Aragonese", tag_quiet: "Tranquilla", tag_reservation: "Numero Chiuso", tag_flamingos: "Fenicotteri Rosa", tag_soft: "Sabbia Soffice", tag_rental: "Noleggio & Tour", tag_dinghy: "Gommone & Tour", tag_sailing: "Gommone & Vela", tag_sailboat: "Barca a Vela", tag_mpa: "Area Marina Protetta", tag_yacht: "Mini Yacht & Gommoni", tag_traditional: "Cucina Tipica", tag_local: "Prodotti Locali", tag_fixed: "Menù Fisso Tipico", tag_meat: "Carne Locale", tag_family: "Conduzione Familiare", tag_medical: "Emergenza Sanitaria", tag_police: "Forze dell'Ordine", tag_emerg: "Emergenze", tag_bank: "Banca & Bancomat", tag_church: "Chiesa", tag_closest: "Più Vicino",
+        btn_call_med: "Chiama Guardia Medica", btn_call_carab: "Chiama Carabinieri", btn_call_bank: "Chiama Banca", btn_map_church: "Mappa Chiesa", btn_nav_super: "Naviga al Supermercato", btn_map_pharmacy: "Mappa Farmacia",
+        s1_title: "Guardia Medica (Olia Speciosa)", s1_desc: "Servizio di guardia medica turistica / assistenziale a Olia Speciosa.",
+        s2_title: "Carabinieri (Castiadas Centro)", s2_desc: "Comando Stazione Carabinieri di Castiadas sulla SP20.",
         s3_desc: "Filiale e sportello bancomat in località Olia Speciosa.",
         s4_desc: "Chiesa principale della comunità di Olia Speciosa a Castiadas.",
-        s5_title: "Supermercato \"Vicino a Te\"",
-        s5_desc: "Il punto di riferimento principale per la spesa ad Olia Speciosa.",
-        s6_title: "Farmacia Olia Speciosa",
+        s5_title: "Supermercato \"Vicino a Te\"", s5_desc: "Il punto di riferimento principale per la spesa ad Olia Speciosa.",
+        s6_title: "Farmacia Olia Speciosa", s6_desc: "Piazza Municipio, Olia Speciosa (Castiadas).",
         b1_desc: "Ampia spiaggia poco affollata, con sabbia mista a ciottoli levigati e acqua trasparente.",
         b2_desc: "Un'oasi naturale immersa nella macchia mediterranea, ideale per chi cerca totale pace.",
         b3_desc: "Insenatura naturale protetta dai venti, con mare cristallino e contorno di rocce.",
@@ -741,6 +985,7 @@
         b13_desc: "Oltre 2 km di spiaggia bianca abbracciata da una profumata pineta d'eucalipti.",
         b14_desc: "Fiordo naturale protetto dalla torre, con fondale basso e calmo ideale per i bambini.",
         b15_desc: "Insenatura riservata dove godersi il mare lontano dalla folla.",
+        b16_desc: "Prenotazione obbligatoria.",
         b17_desc: "Famosa striscia di sabbia finissima tra il mare azzurro e lo stagno di Notteri.",
         b18_desc: "Insenatura protetta dal promontorio di Capo Carbonara con fondale basso.",
         e1_desc: "Servizi in spiaggia e locazione natanti direttamente a Cala Sinzias.",
@@ -774,56 +1019,35 @@
         btn_call: "Call",
         btn_map: "Map",
         btn_map_info: "Map & Info",
-        tag_wild: "Wild",
-        tag_dunes: "Natural Dunes",
-        tag_bay: "Wild Bay",
-        tag_private: "Secluded",
-        tag_promontory: "Promontory",
-        tag_sand: "Fine Sand",
-        tag_equipped: "Equipped",
-        tag_iconic: "Iconic",
-        tag_pool: "Natural Pool",
-        tag_sheltered: "Sheltered",
-        tag_kiosk: "Beach Bar",
-        tag_golden: "Golden Sand",
-        tag_pine: "Pine Forest",
-        tag_tower: "Aragonese Tower",
-        tag_quiet: "Quiet",
-        tag_reservation: "Limited Access",
-        tag_flamingos: "Pink Flamingos",
-        tag_soft: "Soft Sand",
-        tag_rental: "Rental & Tours",
-        tag_dinghy: "Dinghy & Tours",
-        tag_sailing: "Dinghy & Sailing",
-        tag_sailboat: "Sailboat",
-        tag_mpa: "Marine Protected Area",
-        tag_yacht: "Mini Yacht & Dinghies",
-        tag_traditional: "Typical Cuisine",
-        tag_local: "Local Products",
-        tag_fixed: "Fixed Typical Menu",
-        tag_meat: "Local Meat",
-        tag_family: "Family Run",
-        tag_medical: "Medical Emergency",
-        tag_police: "Police",
-        tag_emerg: "Emergencies",
-        tag_bank: "Bank & ATM",
-        tag_church: "Church",
-        tag_closest: "Closest",
-        btn_call_med: "Call Medical Guard",
-        btn_call_carab: "Call Police",
-        btn_call_bank: "Call Bank",
-        btn_map_church: "Church Map",
-        btn_nav_super: "Navigate to Supermarket",
-        btn_map_pharmacy: "Pharmacy Map",
-        s1_title: "Medical Guard (Olia Speciosa)",
-        s1_desc: "Tourist and healthcare medical guard service in Olia Speciosa.",
-        s2_title: "Carabinieri (Castiadas Center)",
-        s2_desc: "Carabinieri Station command of Castiadas on SP20.",
+        weather_title: "☀️ Local weather",
+        weather_sub: "Castiadas, Sardinia · Sardinia",
+        weather_loading: "Loading forecast...",
+        weather_footer: "Weather data: Open-Meteo · Indicative forecast.",
+        w_feels: "🌡️ Feels like",
+        w_wind: "💨 Wind",
+        w_gusts: "🌬️ Gusts",
+        w_forecast_title: "7-day forecast",
+        weather_error: "Weather temporarily unavailable.",
+        cookie_title: "Cookie Notice",
+        cookie_desc: "We use cookies to improve your browsing experience. Technical cookies are necessary for the website's operation.",
+        cookie_accept: "Accept All",
+        cookie_reject: "Necessary Only",
+        cookie_settings: "Preferences",
+        cookie_manage: "Manage Cookie Preferences",
+        cookie_modal_title: "Cookie Preferences",
+        cookie_nec_title: "Technical Cookies (Required)",
+        cookie_nec_desc: "Essential for the guide's basic functions and local weather.",
+        cookie_ana_title: "Analytics Cookies",
+        cookie_ana_desc: "They help us improve our services by analyzing usage.",
+        cookie_save: "Save Preferences",
+        tag_wild: "Wild", tag_dunes: "Natural Dunes", tag_bay: "Wild Bay", tag_private: "Secluded", tag_promontory: "Promontory", tag_sand: "Fine Sand", tag_equipped: "Equipped", tag_iconic: "Iconic", tag_pool: "Natural Pool", tag_sheltered: "Sheltered", tag_kiosk: "Beach Bar", tag_golden: "Golden Sand", tag_pine: "Pine Forest", tag_tower: "Aragonese Tower", tag_quiet: "Quiet", tag_reservation: "Limited Access", tag_flamingos: "Pink Flamingos", tag_soft: "Soft Sand", tag_rental: "Rental & Tours", tag_dinghy: "Dinghy & Tours", tag_sailing: "Dinghy & Sailing", tag_sailboat: "Sailboat", tag_mpa: "Marine Protected Area", tag_yacht: "Mini Yacht & Dinghies", tag_traditional: "Typical Cuisine", tag_local: "Local Products", tag_fixed: "Fixed Typical Menu", tag_meat: "Local Meat", tag_family: "Family Run", tag_medical: "Medical Emergency", tag_police: "Police", tag_emerg: "Emergencies", tag_bank: "Bank & ATM", tag_church: "Church", tag_closest: "Closest",
+        btn_call_med: "Call Medical Guard", btn_call_carab: "Call Police", btn_call_bank: "Call Bank", btn_map_church: "Church Map", btn_nav_super: "Navigate to Supermarket", btn_map_pharmacy: "Pharmacy Map",
+        s1_title: "Medical Guard (Olia Speciosa)", s1_desc: "Tourist and healthcare medical guard service in Olia Speciosa.",
+        s2_title: "Carabinieri (Castiadas Center)", s2_desc: "Carabinieri Station command of Castiadas on SP20.",
         s3_desc: "Branch and ATM located in Olia Speciosa.",
         s4_desc: "Main church of the Olia Speciosa community in Castiadas.",
-        s5_title: "\"Vicino a Te\" Supermarket",
-        s5_desc: "The main reference point for grocery shopping in Olia Speciosa.",
-        s6_title: "Olia Speciosa Pharmacy",
+        s5_title: "\"Vicino a Te\" Supermarket", s5_desc: "The main reference point for grocery shopping in Olia Speciosa.",
+        s6_title: "Olia Speciosa Pharmacy", s6_desc: "Piazza Municipio, Olia Speciosa (Castiadas).",
         b1_desc: "Spacious, uncrowded beach with sand mixed with smooth pebbles and crystal clear water.",
         b2_desc: "A natural oasis immersed in the Mediterranean scrub, ideal for those seeking total peace.",
         b3_desc: "Natural inlet protected from the winds, featuring crystal clear water and rocky surroundings.",
@@ -839,6 +1063,7 @@
         b13_desc: "Over 2 km of white beach embraced by a fragrant eucalyptus pine forest.",
         b14_desc: "Natural fjord protected by the tower, with a shallow and calm seabed ideal for children.",
         b15_desc: "Reserved inlet to enjoy the sea away from the crowd.",
+        b16_desc: "Reservation required.",
         b17_desc: "Famous strip of very fine sand between the blue sea and the Notteri pond.",
         b18_desc: "Inlet protected by the Capo Carbonara promontory with a shallow seabed.",
         e1_desc: "Beach services and boat rentals directly at Cala Sinzias.",
@@ -857,28 +1082,173 @@
     };
 
     function setLanguage(lang) {
-      // Aggiorna stato bottoni lingua
+      currentLang = lang;
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
       });
-
-      // Traduci tutti gli elementi con attributo data-i18n
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
           el.innerHTML = translations[lang][key];
         }
       });
+      // Ricarica il meteo per tradurre anche condizioni e giorni
+      if (typeof loadWeather === 'function') {
+        loadWeather();
+      }
     }
 
     function switchTab(sectionId, btn) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
       document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      
       document.getElementById(sectionId).classList.add('active');
       btn.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Gestione Cookie
+    function checkCookieConsent() {
+      const consent = localStorage.getItem('salulla_cookie_consent');
+      if (!consent) {
+        document.getElementById('cookieBanner').classList.add('show');
+      }
+    }
+
+    function acceptAllCookies() {
+      localStorage.setItem('salulla_cookie_consent', JSON.stringify({ technical: true, analytics: true }));
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+
+    function rejectOptionalCookies() {
+      localStorage.setItem('salulla_cookie_consent', JSON.stringify({ technical: true, analytics: false }));
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+
+    function openCookieModal() {
+      const consent = JSON.parse(localStorage.getItem('salulla_cookie_consent') || '{}');
+      document.getElementById('analyticsConsent').checked = consent.analytics || false;
+      document.getElementById('cookieBanner').classList.remove('show');
+      document.getElementById('cookieModal').classList.add('show');
+    }
+
+    function saveCookiePreferences() {
+      const analytics = document.getElementById('analyticsConsent').checked;
+      localStorage.setItem('salulla_cookie_consent', JSON.stringify({ technical: true, analytics: analytics }));
+      document.getElementById('cookieModal').classList.remove('show');
+    }
+
+    window.addEventListener('DOMContentLoaded', checkCookieConsent);
+
+    // Meteo Script Dinamico
+    let loadWeather;
+    (() => {
+      const root = document.getElementById("meteo-sa-lulla");
+      if (root.dataset.initialized) return;
+      root.dataset.initialized = "true";
+
+      const status = root.querySelector("#meteo-status");
+      const content = root.querySelector("#meteo-content");
+
+      const url = "https://api.open-meteo.com/v1/forecast"
+        + "?latitude=39.24&longitude=9.57"
+        + "&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m"
+        + "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max"
+        + "&forecast_days=7&timezone=Europe%2FRome&wind_speed_unit=kmh";
+
+      const weatherMap = {
+        0: { it: "Sereno", en: "Clear" },
+        1: { it: "Prevalentemente sereno", en: "Mainly clear" },
+        2: { it: "Parzialmente nuvoloso", en: "Partly cloudy" },
+        3: { it: "Nuvoloso", en: "Cloudy" },
+        45: { it: "Nebbia", en: "Fog" },
+        48: { it: "Nebbia", en: "Fog" },
+        51: { it: "Pioviggine", en: "Drizzle" },
+        53: { it: "Pioviggine", en: "Drizzle" },
+        55: { it: "Pioviggine intensa", en: "Dense drizzle" },
+        61: { it: "Pioggia", en: "Rain" },
+        63: { it: "Pioggia", en: "Rain" },
+        65: { it: "Pioggia intensa", en: "Heavy rain" },
+        71: { it: "Neve", en: "Snow" },
+        73: { it: "Neve", en: "Snow" },
+        75: { it: "Neve intensa", en: "Heavy snow" },
+        80: { it: "Rovesci", en: "Showers" },
+        81: { it: "Rovesci", en: "Showers" },
+        82: { it: "Rovesci intensi", en: "Heavy showers" },
+        95: { it: "Temporale", en: "Thunderstorm" },
+        96: { it: "Temporale", en: "Thunderstorm" },
+        99: { it: "Temporale", en: "Thunderstorm" }
+      };
+
+      const weatherIcons = {
+        0: "☀️", 1: "🌤️", 2: "⛅", 3: "☁️",
+        45: "🌫️", 48: "🌫️", 51: "🌦️", 53: "🌦️", 55: "🌧️",
+        61: "🌧️", 63: "🌧️", 65: "🌧️", 71: "🌨️", 73: "🌨️", 75: "❄️",
+        80: "🌦️", 81: "🌧️", 82: "🌧️", 95: "⛈️", 96: "⛈️", 99: "⛈️"
+      };
+
+      const round = n => Math.round(n);
+
+      loadWeather = async function() {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error("Weather service unavailable");
+          const data = await response.json();
+          const current = data.current;
+          const daily = data.daily;
+
+          const code = current.weather_code;
+          const descObj = weatherMap[code] || { it: "Variabile", en: "Variable" };
+          const icon = weatherIcons[code] || "🌤️";
+
+          root.querySelector("#meteo-icon").textContent = icon;
+          root.querySelector("#meteo-temp").textContent = round(current.temperature_2m) + "°";
+          root.querySelector("#meteo-description").textContent = descObj[currentLang] || descObj.it;
+          root.querySelector("#meteo-feels").textContent = round(current.apparent_temperature) + "°";
+          root.querySelector("#meteo-wind").textContent = round(current.wind_speed_10m) + " km/h";
+          root.querySelector("#meteo-gusts").textContent = round(current.wind_gusts_10m) + " km/h";
+
+          const days = root.querySelector("#meteo-days");
+          days.innerHTML = "";
+
+          daily.time.forEach((date, i) => {
+            const dayCode = daily.weather_code[i];
+            const dayDescObj = weatherMap[dayCode] || { it: "Variabile", en: "Variable" };
+            const dayIcon = weatherIcons[dayCode] || "🌤️";
+
+            const localeStr = currentLang === 'en' ? 'en-US' : 'it-IT';
+            const dayName = i === 0 
+              ? (currentLang === 'en' ? 'Today' : 'Oggi') 
+              : new Intl.DateTimeFormat(localeStr, { weekday: "short", timeZone: "UTC" }).format(new Date(date + "T12:00:00Z"));
+
+            const card = document.createElement("div");
+            card.className = "meteo-day";
+
+            const day = document.createElement("div");
+            day.textContent = dayName;
+
+            const iconEl = document.createElement("div");
+            iconEl.className = "day-icon";
+            iconEl.textContent = dayIcon;
+
+            const temperatures = document.createElement("strong");
+            temperatures.textContent = round(daily.temperature_2m_max[i]) + "° / " + round(daily.temperature_2m_min[i]) + "°";
+
+            const rain = document.createElement("div");
+            rain.textContent = "☔ " + (daily.precipitation_probability_max[i] ?? "--") + "%";
+
+            card.append(day, iconEl, temperatures, rain);
+            days.appendChild(card);
+          });
+
+          status.hidden = true;
+          content.hidden = false;
+        } catch (error) {
+          status.textContent = translations[currentLang].weather_error;
+        }
+      };
+
+      loadWeather();
+    })();
   </script>
 </body>
 </html>
