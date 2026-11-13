@@ -8,20 +8,22 @@
   <!-- SEO & Social Meta Tags -->
   <meta name="description" content="Guida digitale ufficiale di Sabadi Home Sa Lulla a Castiadas. Scopri le spiagge di Costa Rei e Villasimius, ristoranti tipici, meteo e servizi utili.">
   <meta name="keywords" content="Sa Lulla, Castiadas, Costa Rei, Villasimius, Sardegna, Welcome Guide, Spiagge Sardegna">
-  <link rel="canonical" href="https://salulla.it/">
+  <link rel="canonical" href="https://guida.salulla.it/">
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://salulla.it/">
+  <meta property="og:url" content="https://guida.salulla.it/">
   <meta property="og:title" content="Sabadi Home Sa Lulla | Welcome Guide">
   <meta property="og:description" content="La tua guida digitale per vivere al meglio Castiadas, Costa Rei, Villasimius e la costa sud-orientale della Sardegna.">
-  <meta property="og:image" content="https://salulla.it/logo_sa_lulla.png">
+  <meta property="og:image" content="https://guida.salulla.it/logo_sa_lulla.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sabadi Home Sa Lulla | Welcome Guide">
   <meta name="twitter:description" content="La tua guida digitale per vivere al meglio Castiadas, Costa Rei, Villasimius e la Sardegna.">
-  <meta name="twitter:image" content="https://salulla.it/logo_sa_lulla.png">
+  <meta name="twitter:image" content="https://guida.salulla.it/logo_sa_lulla.png">
 
   <!-- Favicon & Icons -->
   <link rel="icon" type="image/png" sizes="96x96" href="/logo_sa_lulla.png">
@@ -33,8 +35,8 @@
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "Sabadi Home Sa Lulla",
-    "image": "https://salulla.it/logo_sa_lulla.png",
-    "url": "https://salulla.it/",
+    "image": "https://guida.salulla.it/logo_sa_lulla.png",
+    "url": "https://guida.salulla.it/",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Castiadas",
@@ -522,7 +524,6 @@
       if (!localStorage.getItem('salulla_cookie_consent')) document.getElementById('cookieBanner').classList.add('show');
     }
     function acceptAllCookies() {
-      // L'opzione viene registrata; non viene caricato alcun servizio analytics finché non configurato.
       storeConsent(true);
       document.getElementById('cookieBanner').classList.remove('show');
     }
